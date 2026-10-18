@@ -1,0 +1,92 @@
+market = "US"
+storage = "data/sample"
+start = "2024-01-01"
+end = "2024-12-31"
+update_lookback_days = 14
+daily_check_time = "18:30 America/New_York"
+sample_is_unbiased_universe = false
+
+[http]
+requests_per_second = 2
+max_attempts = 3
+timeout = 30
+
+[sec]
+user_agent_env = "SEC_USER_AGENT"
+forms = ["10-K", "10-K/A", "10-Q", "10-Q/A", "8-K", "8-K/A", "25-NSE"]
+max_documents_per_company = 4
+download_exhibits = true
+historical_submissions = true
+
+[calendar]
+enabled = true
+exchanges = ["XNYS", "XNAS"]
+timezone = "America/New_York"
+
+[alpaca]
+enabled = true
+key_env = "APCA_API_KEY_ID"
+secret_env = "APCA_API_SECRET_KEY"
+feed = "iex"
+adjustment = "raw"
+corporate_actions = true
+
+[fred]
+enabled = true
+api_key_env = "FRED_API_KEY"
+allow_public_snapshot = true
+series = ["FEDFUNDS", "CPIAUCSL", "UNRATE"]
+
+[[securities]]
+company_id = "sec:0000320193"
+security_id = "local:us:aapl-common"
+cik = "0000320193"
+symbol = "AAPL"
+exchange = "XNAS"
+currency = "USD"
+security_type = "common_stock"
+
+[[securities]]
+company_id = "sec:0001045810"
+security_id = "local:us:nvda-common"
+cik = "0001045810"
+symbol = "NVDA"
+required_accessions = ["0001045810-24-000113", "0001045810-24-000124"]
+end = "2025-06-01"
+exchange = "XNAS"
+currency = "USD"
+security_type = "common_stock"
+
+[[securities]]
+company_id = "sec:0001326801"
+security_id = "local:us:meta-class-a"
+cik = "0001326801"
+symbol = "META"
+exchange = "XNAS"
+currency = "USD"
+security_type = "class_a_common_stock"
+start = "2022-01-01"
+end = "2022-12-31"
+
+[[securities]]
+company_id = "sec:0001418091"
+security_id = "local:us:twtr-common"
+cik = "0001418091"
+symbol = "TWTR"
+exchange = "XNYS"
+currency = "USD"
+security_type = "common_stock"
+start = "2022-01-01"
+end = "2022-12-31"
+
+[public_documents]
+manifest = "data/legacy_manifest/public_samples.rejected.json"
+
+[research]
+enabled = true
+feeds = []
+
+[research.policy]
+enabled = true
+terms = ["semiconductors"]
+max_documents = 3

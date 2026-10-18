@@ -1,0 +1,2 @@
+C:\Users\xiayu\Documents\Codex\2026-09-09\new-chat\outputs\qq-vm\probe-media\QQ.UiaProbe-selfcontained\QQ.UiaProbe.pdb
+C:\Users\xiayu\Documents\Codex\2026-09-09\new-chat\outputs\qq-vm\probe-media\QQ.UiaProbe-selfcontained\QQ.UiaProbe.exe

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "mode": "read-only",
+  "defaultCommandTimeoutSeconds": 20,
+  "forbiddenTokens": ["fix", "repair", "install", "restart", "set", "remove", "start", "stop", "reload"],
+  "commands": [
+    { "id": "wsl-list", "executable": "wsl.exe", "arguments": ["--list", "--verbose"], "executionContext": "windows-host" },
+    { "id": "wsl-running-list", "executable": "wsl.exe", "arguments": ["--list", "--running", "--quiet"], "executionContext": "windows-host" },
+    { "id": "managed-wsl-openclaw-version", "executable": "wsl.exe", "arguments": ["--distribution", "OpenClawGateway", "--user", "openclaw", "--", "openclaw", "--version"], "executionContext": "managed-wsl-openclaw-user" },
+    { "id": "managed-wsl-openclaw-doctor", "executable": "wsl.exe", "arguments": ["--distribution", "OpenClawGateway", "--user", "openclaw", "--", "openclaw", "doctor", "--json"], "executionContext": "managed-wsl-openclaw-user" },
+    { "id": "managed-wsl-openclaw-gateway-status", "executable": "wsl.exe", "arguments": ["--distribution", "OpenClawGateway", "--user", "openclaw", "--", "openclaw", "gateway", "status", "--json"], "executionContext": "managed-wsl-openclaw-user" },
+    { "id": "native-openclaw-version", "executable": "openclaw", "arguments": ["--version"], "executionContext": "native-cli-if-present" },
+    { "id": "native-openclaw-doctor", "executable": "openclaw", "arguments": ["doctor", "--json"], "executionContext": "native-cli-if-present" },
+    { "id": "native-openclaw-gateway-status", "executable": "openclaw", "arguments": ["gateway", "status", "--json"], "executionContext": "native-cli-if-present" },
+    { "id": "node-version", "executable": "node", "arguments": ["--version"], "executionContext": "windows-host" },
+    { "id": "npm-version", "executable": "npm", "arguments": ["--version"], "executionContext": "windows-host" }
+  ],
+  "readAccess": [
+    "Windows CIM: operating-system identity and architecture only",
+    "Windows registry: explicit OpenClaw Hub installation keys only",
+    "Hub installed-file version and Authenticode metadata only",
+    "WSL distribution inventory only",
+    "Structured stdout and stderr from commands in this allowlist only"
+  ]
+}

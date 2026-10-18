@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "equity-evidence-collector"
+version = "0.5.0"
+description = "Versioned US equity research evidence collector"
+requires-python = ">=3.11"
+dependencies = ["requests==2.34.2", "exchange-calendars==4.13.2", "tzdata==2026.5", "lxml==6.1.3", "pypdf==6.19.0", "beautifulsoup4==4.15.0"]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+
+[project.scripts]
+equity-data = "equity_data.cli:main"
+equity-competition = "equity_data.competition.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["equity_data*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

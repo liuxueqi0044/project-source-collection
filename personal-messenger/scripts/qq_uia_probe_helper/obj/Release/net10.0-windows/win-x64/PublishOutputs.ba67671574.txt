@@ -1,0 +1,6 @@
+C:\Users\xiayu\Documents\Codex\2026-09-09\new-chat\outputs\qq-vm\probe-media\QQ.UiaProbe-warmup-62c5109e\D3DCompiler_47_cor3.dll
+C:\Users\xiayu\Documents\Codex\2026-09-09\new-chat\outputs\qq-vm\probe-media\QQ.UiaProbe-warmup-62c5109e\PenImc_cor3.dll
+C:\Users\xiayu\Documents\Codex\2026-09-09\new-chat\outputs\qq-vm\probe-media\QQ.UiaProbe-warmup-62c5109e\PresentationNative_cor3.dll
+C:\Users\xiayu\Documents\Codex\2026-09-09\new-chat\outputs\qq-vm\probe-media\QQ.UiaProbe-warmup-62c5109e\vcruntime140_cor3.dll
+C:\Users\xiayu\Documents\Codex\2026-09-09\new-chat\outputs\qq-vm\probe-media\QQ.UiaProbe-warmup-62c5109e\wpfgfx_cor3.dll
+C:\Users\xiayu\Documents\Codex\2026-09-09\new-chat\outputs\qq-vm\probe-media\QQ.UiaProbe-warmup-62c5109e\QQ.UiaProbe.exe

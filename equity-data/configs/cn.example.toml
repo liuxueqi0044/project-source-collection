@@ -1,0 +1,19 @@
+market = "CN"
+storage = "data/cn"
+start = "2024-01-01"
+end = "2024-12-31"
+update_lookback_days = 14
+daily_check_time = "18:30 Asia/Shanghai"
+
+[calendar]
+enabled = true
+exchanges = ["XSHG"]
+timezone = "Asia/Shanghai"
+
+[cn]
+status = "adapter_pending"
+disclosure_provider = "cninfo"
+prices_provider = "tushare_pending_authorization"
+timezone = "Asia/Shanghai"
+currency = "CNY"
+rules = "market_rules records require independently sourced effective dates"
